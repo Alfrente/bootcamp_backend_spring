@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>index</title>
 </head>
 <body>
-<ul>
-    <li><a th:href="@{/params/string(texto='Hola mundo')}"> /params/string?texto="Hola mundo"</a></li>
-    <li><a th:href="@{/params/integer(numero=23, numero2=adsd)}"> /params/integer?numero=23</a></li>
+<ul> <!--  ul define una lista desordenada -->
+    <li><a th:href="@{/params/string(texto='Hola mundo')}"> /params/string?texto="Hola mundo"</a></li> <!-- li que especifican los ítems de la lista -->
+    <li><a th:href="@{/params/integer(numero=23, numero2=adsd)}"> /params/integer?numero=23</a></li> <!-- <a> crea un enlace a otras páginas de internet -->
     <li><a th:href="@{/params/mix-params(saludo='Cordial saludo', numero=23)}">/params/mix-params</a></li>
     <li><a th:href="@{/params/mix-params-request(saludo='Cordial saludo request', numero=null)}">/params/mix-params-request</a></li>
     <li><a th:href="@{/app/listar}">/app//listar</a></li>

@@ -21,15 +21,15 @@ public class IndexController {
     }
 
     @GetMapping("/usuario")
-    private String usuarioController(Model model) {
-        Usuario usuario = new Usuario("Arroyo", "Hernandez","arroyolokura8@gmail.com", "3226093031");
+    private String perfilUsuario(Model model) {
+        Usuario usuario = new Usuario("Arroyo", "Hernandez","arroyo@gmail.com", "1234567810");
         model.addAttribute("titulo", "ver usuario ".concat(usuario.nombre()));
         model.addAttribute("usuario", usuario);
         return "usuario";
     }
 
     @GetMapping("/listar")
-    public String listar(Model model){
+    public String listarUsuarios(Model model){
         model.addAttribute("titulo", "Listado de usuario");
         return "listar";
     }
@@ -37,7 +37,7 @@ public class IndexController {
     @ModelAttribute("usuarios")
     public List<Usuario> poblarUsuarios(){
         List<Usuario> usuarios = new ArrayList<>();
-        usuarios.add(new Usuario("Arroyo", "Hernandez","Arroyo@gmail.com", "3226093031"));
+        usuarios.add(new Usuario("Arroyo", "Hernandez","Arroyo@gmail.com", "1234567890"));
         usuarios.add(new Usuario("Daniel", "Asprilla","Daniel@gmail.com", "1234567890"));
         usuarios.add(new Usuario("Damian", "Caicedo","Damian@gmail.com", "0987654321"));
         usuarios.add(new Usuario("Josue", "Renteria","Josue@gmail.com", "1112131415"));
