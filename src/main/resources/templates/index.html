@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/params/string(texto='Hola mundo')}"> /params/string?texto="Hola mundo"</a></li>
+    <li><a th:href="@{/params/integer(numero=23, numero2=adsd)}"> /params/integer?numero=23</a></li>
+    <li><a th:href="@{/params/mix-params(saludo='Cordial saludo', numero=23)}">/params/mix-params</a></li>
+    <li><a th:href="@{/params/mix-params-request(saludo='Cordial saludo request', numero=null)}">/params/mix-params-request</a></li>
+    <li><a th:href="@{/app/listar}">/app//listar</a></li>
+    <li><a th:href="@{/params/string(texto='Hola mundo')}"> /params/string?texto="Hola mundo"</a></li>
+</ul>
+
+<h1 th:text=${saludo}></h1>
+<h1 th:text="${saludo}"></h1>
+<br>
+<br>
+<h1>saludo html!</h1>
+</body>
+</html>
